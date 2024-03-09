@@ -1,0 +1,41 @@
+﻿@model Userlogin;
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<style>
+    body {
+        background-color: teal;
+    }
+
+    .custom-bg {
+        background-color:slategray;
+    }
+</style>
+
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <form method="post" asp-action="Login">
+            <div class="form-group">
+                <label class="form-label"width="50%">Username</label>
+                <input class="form-control" asp-for="Username" required placeholder="Enter username" />
+            </div>
+            <br />
+            <div class="form-group">
+                <label class="form-label">Password</label>
+                <input class="form-control" asp-for="Password" required placeholder="Enter password" />
+            </div>
+            <br />
+            <input class="btn btn-primary" type="submit" value="Login" />
+            @if (ViewData["error"] != "")
+            {
+                <h3 style="color:red;">@ViewData["error"]</h3>
+            }
+<br />
+            <label>   No Account .                         Register Now </label>
+
+
+        </form>
+    </div>
+    <div class="col-4"></div>
+</div>

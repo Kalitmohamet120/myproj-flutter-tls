@@ -1,0 +1,40 @@
+﻿
+@model Data;
+
+<h3>Register New Customer </h3>
+<br />
+
+<form method="post" asp-action="Register">
+
+    <div class="form-group" width="70%">
+        <label class="form-label">FullName:  </label>
+        <input asp-for="Full_Name" class="form-control" />
+
+    </div>
+    <br /><br />
+
+    <div class="form-group" width="70%">
+        <label class="form-label">Email ::  </label>
+        <input asp-for="Email" class="form-control" />
+
+    </div>
+    <br /><br />
+
+    <div class="form-group" width ="70%">
+    <label class="form-label">PHONE:  </label>
+    <input asp-for="Phone" class="form-control" />
+
+    </div>
+    <br /><br />
+
+
+
+   
+
+ 
+
+    <a class="btn btn-danger" asp-action="Inddex">Cancel</a>
+    <button type="submit" class="btn btn-primary">Save</button>
+
+</form>
+
